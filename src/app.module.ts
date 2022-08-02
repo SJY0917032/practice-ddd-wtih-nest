@@ -6,9 +6,10 @@ import { EventsModule } from './events/EventsModule';
 
 @Module({
   imports: [
+    EventsModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'practice-database',
+      host: 'practice-db',
       port: 3306,
       username: 'root',
       password: 'root',
@@ -19,7 +20,6 @@ import { EventsModule } from './events/EventsModule';
       retryAttempts: 30,
       retryDelay: 5000,
     }),
-    EventsModule,
   ],
   controllers: [],
   providers: [],

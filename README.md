@@ -36,3 +36,12 @@
   - 도커 환경변수 분리하기
 
 TODO : 이벤트 TDD 시작하기
+
+### 0802
+
+> TDD 어렵..
+
+공통으로 사용될 Class부터 제작
+
+IUseCase? -> UseCase에서 사용될 execute에대한 정의
+Result -> Result를통해 Domain생성
