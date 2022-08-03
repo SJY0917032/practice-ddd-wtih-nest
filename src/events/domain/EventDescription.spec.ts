@@ -1,5 +1,5 @@
 import { Result } from '../../shared/core/Result/Result';
-import { EventDescription } from './EventDesciption';
+import { EventDescription } from './EventDescription';
 
 describe('Event Description', () => {
   const EVENT_DESCRIPTION = '쉰이나는 이벤트의 설명입니다.';
@@ -7,11 +7,8 @@ describe('Event Description', () => {
 
   let eventDescriptionOrError: Result<EventDescription>;
 
-  beforeAll(() => {
-    eventDescriptionOrError = EventDescription.create(EVENT_DESCRIPTION);
-  });
-
   it('생성', () => {
+    eventDescriptionOrError = EventDescription.create(EVENT_DESCRIPTION);
     expect(eventDescriptionOrError.isSuccess).toBe(true);
     expect(eventDescriptionOrError.isFailure).toBe(false);
   });

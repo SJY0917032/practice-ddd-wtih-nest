@@ -7,11 +7,8 @@ describe('EventTitle', () => {
 
   let eventTitleOrError: Result<EventTitle>;
 
-  beforeAll(() => {
-    eventTitleOrError = EventTitle.create(EVENT_TITLE);
-  });
-
   it('생성', () => {
+    eventTitleOrError = EventTitle.create(EVENT_TITLE);
     expect(eventTitleOrError.isSuccess).toBe(true);
     expect(eventTitleOrError.isFailure).toBe(false);
   });

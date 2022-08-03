@@ -7,11 +7,8 @@ describe('EventExposure', () => {
 
   let eventExposureOrError: Result<EventExposure>;
 
-  beforeAll(() => {
-    eventExposureOrError = EventExposure.create(EVENT_EXPOSURE);
-  });
-
   it('생성', () => {
+    eventExposureOrError = EventExposure.create(EVENT_EXPOSURE);
     expect(eventExposureOrError.isSuccess).toBe(true);
     expect(eventExposureOrError.isFailure).toBe(false);
   });
