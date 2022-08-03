@@ -7,7 +7,7 @@ import {
 
 // event Entity
 @Entity('event')
-export class Event {
+export class EventEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
