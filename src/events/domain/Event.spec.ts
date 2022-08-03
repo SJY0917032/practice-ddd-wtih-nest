@@ -29,7 +29,7 @@ describe('Event', () => {
     eventStartDate = EventDate.create(START).value;
     eventEndDate = EventDate.create(END).value;
 
-    eventOrError = Event.createNew({
+    eventOrError = Event.create({
       eventExposure,
       eventTitle,
       eventDescription,
@@ -47,7 +47,7 @@ describe('Event', () => {
     eventStartDate = EventDate.create(END).value;
     eventEndDate = EventDate.create(START).value;
 
-    eventOrError = Event.createNew({
+    eventOrError = Event.create({
       eventExposure,
       eventTitle,
       eventDescription,

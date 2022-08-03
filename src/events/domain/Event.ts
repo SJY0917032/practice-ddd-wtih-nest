@@ -28,10 +28,6 @@ export class Event extends AggregateRoot<EventProps, string> {
     return Result.ok(new Event(props, id));
   }
 
-  static createNew(props: EventProps): Result<Event> {
-    return this.create({ ...props });
-  }
-
   get eventExposure(): EventExposure {
     return this.props.eventExposure;
   }
