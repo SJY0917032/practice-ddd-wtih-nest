@@ -20,17 +20,17 @@
 
 ## 진행 상황
 
-- [ X ] api 구현
-  - [ X ] CreateEventUseCase
-  - [ X ] EditEventUseCase
-  - [ X ] FindAllEventUseCase
-  - [ X ] FindOneEventUseCase
-  - [ X ] FindEventByTitleUseCase
+- [x] api 구현
+  - [x] CreateEventUseCase
+  - [x] EditEventUseCase
+  - [x] FindAllEventUseCase
+  - [x] FindOneEventUseCase
+  - [x] FindEventByTitleUseCase
 - [ ] 문서화
   - [ ] 실행방법
   - [ ] 이벤트 도메인의 구분
   - [ ] 구현하는동안 생각한 점
-- [ X ] TDD 해봤니
+- [x] TDD 해봤니
 
 ### 0801
 
