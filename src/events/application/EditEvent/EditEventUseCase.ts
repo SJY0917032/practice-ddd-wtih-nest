@@ -1,4 +1,4 @@
-import { Inject } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { IUseCase } from '../../../shared/core/UseCase/IUseCase';
 import { Event } from '../../domain/Event';
 import { EventDate } from '../../domain/EventDate';
@@ -12,6 +12,7 @@ import {
 import { EditEventUseCaseRequest } from './dto/EditEventUseCaseRequest';
 import { EditEventUseCaseResponse } from './dto/EditEventUseCaseResponse';
 
+@Injectable()
 export class EditEventUseCase
   implements IUseCase<EditEventUseCaseRequest, EditEventUseCaseResponse>
 {

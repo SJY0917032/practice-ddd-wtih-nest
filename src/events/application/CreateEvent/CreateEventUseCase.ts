@@ -1,4 +1,4 @@
-import { Inject } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { isEmpty } from 'lodash';
 import { IUseCase } from '../../../shared/core/UseCase/IUseCase';
 import { Event } from '../../domain/Event';
@@ -13,6 +13,7 @@ import {
 import { CreateEventUseCaseRequest } from './dto/CreateEventUseCaseRequest';
 import { CreateEventUseCaseResponse } from './dto/CreateEventUseCaseResponse';
 
+@Injectable()
 export class CreateEventUseCase
   implements IUseCase<CreateEventUseCaseRequest, CreateEventUseCaseResponse>
 {
