@@ -12,21 +12,25 @@
 
 - Event
   - 이벤트 목록을 조회한다.
+  - 이벤트를 제목으로 조회한다.
   - 이벤트를 조회한다.
   - 이벤트를 만든다.
   - 이벤트를 수정한다.
-  - 이벤트를 삭제한다.
   - 이벤트가 완료된다.
 
 ## 진행 상황
 
-- [ ] api 구현
-  - [ ] 도메인 구분에 따른 진행여부를 체크박스로 넣어주세요.
+- [ X ] api 구현
+  - [ X ] CreateEventUseCase
+  - [ X ] EditEventUseCase
+  - [ X ] FindAllEventUseCase
+  - [ X ] FindOneEventUseCase
+  - [ X ] FindEventByTitleUseCase
 - [ ] 문서화
   - [ ] 실행방법
   - [ ] 이벤트 도메인의 구분
   - [ ] 구현하는동안 생각한 점
-- [ ] TDD 해봤니
+- [ X ] TDD 해봤니
 
 ### 0801
 
