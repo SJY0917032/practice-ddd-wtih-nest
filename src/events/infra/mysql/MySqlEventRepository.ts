@@ -1,5 +1,5 @@
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { Like, Repository } from 'typeorm';
 import { Event } from '../../domain/Event';
 import { EventEntity } from '../entity/EventEntity';
 import { IEventRepository } from '../interface/IEventRepository';
@@ -45,6 +45,20 @@ export class MySqlEventRepository implements IEventRepository {
 
   async findAll(): Promise<Event[]> {
     const events = await this.eventRepository.find();
+
+    if (!events) {
+      return undefined;
+    }
+
+    return MySqlEventRepositoryMapper.toDomains(events);
+  }
+
+  async findByTitle(title: string): Promise<Event[]> {
+    const events = await this.eventRepository.find({
+      where: {
+        title: Like(`%${title}%`),
+      },
+    });
 
     if (!events) {
       return undefined;

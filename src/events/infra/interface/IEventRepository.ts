@@ -8,4 +8,6 @@ export interface IEventRepository {
   find(id: string): Promise<Event> | undefined;
 
   findAll(): Promise<Event[]> | undefined;
+
+  findByTitle(title: string): Promise<Event[]> | undefined;
 }
