@@ -75,3 +75,9 @@ event
 일단 생성시에 auto generate하는방식으로 uuid...
 
 domain,infra부분을 만들면서 감이잡히는중.. 잘못된 감일수도
+
+### 0804
+
+- TDD 어느정도 해봄..
+- Controller 짜는중
+  - Request,Response는 [라이브러리](https://bakjuna.tistory.com/121) 여기 참고하기
