@@ -1,20 +1,33 @@
-import { Controller, HttpStatus, Inject, Req, Res } from '@nestjs/common';
-import { Request, Response } from 'express';
+import { Controller, Get } from '@nestjs/common';
+import { EmptyFoundResponse } from '../../../shared/core/Controller/EmptyFoundResponse';
 import { FindAllEventUseCase } from '../../application/FindAllEvent/FindAllEventUseCase';
+import { FindAllResponse, IEvent } from './dto/EventControllerResponse';
 
 @Controller('Event')
 export class EventController {
   constructor(private readonly findAllEventUseCase: FindAllEventUseCase) {}
 
-  async findAll(@Req() request: Request, @Res() response: Response) {
+  @Get()
+  async findAll(): Promise<FindAllResponse | EmptyFoundResponse> {
     const foundResult = await this.findAllEventUseCase.execute();
 
     if (foundResult.code === 'NOTFOUND') {
-      response.status(HttpStatus.OK).send({
-        statusCode: HttpStatus.OK,
-        timestamp: new Date().toISOString(),
-        path: request.url,
-      });
+      return {
+        useCase: 'findAll',
+        reason: '조회 결과 값이 비어있습니다.(값이 없습니다.)',
+      };
     }
+
+    return {
+      events: foundResult.events.map((event): IEvent => {
+        return {
+          exposure: event.eventExposure.value,
+          title: event.eventTitle.value,
+          description: event.eventDescription.value,
+          startDate: event.eventStartDate.value,
+          endDate: event.eventEndDate.value,
+        };
+      }),
+    };
   }
 }
