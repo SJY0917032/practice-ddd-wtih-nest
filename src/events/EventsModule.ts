@@ -10,6 +10,8 @@ import { FindOneEventUseCase } from './application/FindOneEvent/FindOneEventUseC
 
 /** Controller **/
 import { EventController } from './presentation/EventController/EventController';
+import { CreateEventController } from './presentation/CreateEventController/CreateEventController';
+import { EditEventController } from './presentation/EditEventController/EditEventController';
 
 /** Entities **/
 import { EventEntity } from './infra/entity/EventEntity';
@@ -22,8 +24,9 @@ import { EVENT_REPOSITORY } from './infra/interface/IEventRepository';
 
 @Module({
   imports: [TypeOrmModule.forFeature([EventEntity])],
+
   exports: [],
-  controllers: [EventController],
+  controllers: [EventController, CreateEventController, EditEventController],
   providers: [
     CreateEventUseCase,
     FindAllEventUseCase,

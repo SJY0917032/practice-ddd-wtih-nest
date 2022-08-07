@@ -1,5 +1,4 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { ApiOkResponse, ApiOperation } from '@nestjs/swagger';
 import { EmptyFoundResponse } from '../../../shared/core/Controller/EmptyFoundResponse';
 import { FindAllEventUseCase } from '../../application/FindAllEvent/FindAllEventUseCase';
 import {
@@ -11,7 +10,7 @@ import {
 import { FindOneEventUseCase } from '../../application/FindOneEvent/FindOneEventUseCase';
 import { FindEventByTitleUseCase } from '../../application/FindEventByTitle/FindEventByTitleUseCase';
 
-@Controller('Event')
+@Controller('event')
 export class EventController {
   constructor(
     private readonly findAllEventUseCase: FindAllEventUseCase,

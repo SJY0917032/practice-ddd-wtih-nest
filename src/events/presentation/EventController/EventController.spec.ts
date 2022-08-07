@@ -9,7 +9,7 @@ import { EventController } from './EventController';
 import { FindOneEventUseCase } from '../../application/FindOneEvent/FindOneEventUseCase';
 import { FindEventByTitleUseCase } from '../../application/FindEventByTitle/FindEventByTitleUseCase';
 
-describe('EventController - FindAllEventUseCase', () => {
+describe('EventController', () => {
   let eventController: EventController;
   let findAllEventUseCase: MockProxy<FindAllEventUseCase>;
   let findOneEventUseCase: MockProxy<FindOneEventUseCase>;
