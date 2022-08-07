@@ -6,7 +6,15 @@
 
 > 실행 방법
 
-`실행방법을 적어둡니다.`
+```bash
+vi .env # .env 파일 생성
+docker-compose build
+docker-compose up
+
+Test
+
+yarn test
+```
 
 ## Domain
 
@@ -26,10 +34,10 @@
   - [x] FindAllEventUseCase
   - [x] FindOneEventUseCase
   - [x] FindEventByTitleUseCase
-- [ ] 문서화
-  - [ ] 실행방법
-  - [ ] 이벤트 도메인의 구분
-  - [ ] 구현하는동안 생각한 점
+- [x] 문서화
+  - [x] 실행방법
+  - [x] 이벤트 도메인의 구분
+  - [x] 구현하는동안 생각한 점
 - [x] TDD 해봤니
 
 ### 0801
@@ -71,8 +79,8 @@ event
 #### id?
 
 > id에대한 접근권한을 어떻게 줄것인가?
-생성시 or 생성전...
-일단 생성시에 auto generate하는방식으로 uuid...
+> 생성시 or 생성전...
+> 일단 생성시에 auto generate하는방식으로 uuid...
 
 domain,infra부분을 만들면서 감이잡히는중.. 잘못된 감일수도
 
@@ -86,3 +94,11 @@ domain,infra부분을 만들면서 감이잡히는중.. 잘못된 감일수도
 
 - Controller 테스트완료
 - e2e테스트 ~ing
+
+### 0807
+
+컨트롤러 완료..
+
+e2e는 하다가 포기.. -> 금주내로 시간나면 다시 해보자
+
+스웨거 -> 데코레이터들만 붙이면 작업가능 -> Swagger module작동되는거 확인
