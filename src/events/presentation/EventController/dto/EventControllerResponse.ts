@@ -10,3 +10,11 @@ export interface IEvent {
 export class FindAllResponse {
   events: IEvent[];
 }
+
+export class FindOneResponse {
+  event: IEvent;
+}
+
+export class FindByEventTitleResponse {
+  events: IEvent[];
+}

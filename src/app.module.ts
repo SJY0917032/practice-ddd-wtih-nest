@@ -20,6 +20,7 @@ import { EventsModule } from './events/EventsModule';
       retryAttempts: 30,
       retryDelay: 5000,
     }),
+    EventsModule,
   ],
   controllers: [],
   providers: [],

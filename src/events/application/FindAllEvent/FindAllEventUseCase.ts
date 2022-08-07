@@ -4,7 +4,7 @@ import {
   EVENT_REPOSITORY,
   IEventRepository,
 } from '../../infra/interface/IEventRepository';
-import { FindAllEventUseCAseRequest } from './dto/FindallEventUseCaseRequest';
+import { FindAllEventUseCAseRequest } from './dto/FindAllEventUseCaseRequest';
 import { FindAllEventUseCaseResponse } from './dto/FindAllEventUseCaseResponse';
 
 @Injectable()
