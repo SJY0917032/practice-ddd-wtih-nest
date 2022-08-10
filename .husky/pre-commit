@@ -5,26 +5,11 @@ echo "Git Hook from .husky"
 
 yarn lint && yarn test
 
-FORBIDDEN_HTTPS_URL="https://github.com/SJY0917032/practice-ddd-wtih-nest.git" # insert your remote url (https)
-FORBIDDEN_SSH_URL="git@github.com:SJY0917032/practice-ddd-wtih-nest.git" # insert your remote url (ssh)
-FORBIDDEN_REF="refs/heads/master" # insert branch ref
+BRANCH=`git rev-parse --abbrev-ref HEAD`
 
-remote="$1"
-url="$2"
-
-if [ "$url" != "$FORBIDDEN_HTTPS_URL" -a "$url" != "$FORBIDDEN_SSH_URL" ]
-then
-    echo "this forked project"
-    exit 0 # Forked Project 에서는 제한하지 않음
-fi
-
-if read local_ref local_sha remote_ref remote_sha
-then
-    if [ "$remote_ref" == "$FORBIDDEN_REF" ]
-    then
-        echo "DO NOT PUSH it master"
-        exit 1 # 금지된 ref 로 push 를 실행하면 에러
-    fi
-fi
-​
-exit 0
+# if [ "$BRANCH" == "master" ] || [ "$BRANCH" == "dev"] 
+# then
+#     echo "<$BRANCH> 브랜치에는 커밋이 불가능합니다."
+#     echo "<$BRANCH> 브랜치가 아닌 다른 브랜치에서 커밋을하세요."
+#     exit 1
+# fi
