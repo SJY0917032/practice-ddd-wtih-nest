@@ -4,7 +4,7 @@
 
 
 REGEX='/(DOCS|FEAT|FIX|HOTFIX|CHORE): \(.+\) .+ */'
-MSG_FILE=$0
+MSG_FILE=`cat $1`
 
 echo "<$MSG_FILE>"
 
