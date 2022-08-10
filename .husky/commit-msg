@@ -6,7 +6,7 @@
 REGEX='/DOCS|FEAT|FIX|HOTFIX|CHORE: \(.+\) .+ */'
 MSG_FILE=`cat $1`
 
-
+echo $MSG_FILE
 
 if ! [[ $MSG_FILE =~ $REGEX ]]; then
     echo "[ERROR] 커밋 메시지가 형태에 맞지 않습니다."
