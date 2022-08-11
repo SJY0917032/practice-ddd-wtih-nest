@@ -3,7 +3,7 @@
 
 echo "Git Hook from .husky"
 
-yarn lint && yarn test
+yarn lint-staged && yarn test
 
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 
